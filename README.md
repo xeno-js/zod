@@ -57,8 +57,7 @@ import { withZodValidation } from '@xeno-js/zod'
 import { z } from 'zod'
 
 const app = await new XenoAppBuilder()
-  .addPipeline()
-  .usePipelinePlugin(
+  .addPipeline(
     withZodValidation({
       schemas: {
         CreateUserCommand: z.object({
