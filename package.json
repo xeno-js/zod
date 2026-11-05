@@ -1,6 +1,6 @@
 {
   "name": "@xeno-js/zod",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Zod validation integration for Xeno.js request pipelines, schema validation services, and command/query utilities using TypeScript.",
   "keywords": [
     "xeno",
