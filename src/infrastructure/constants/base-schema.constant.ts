@@ -31,6 +31,17 @@ const cacheableOptionsZodSchema = {
   },
 }
 
+const cacheInvalidationZodSchema = {
+  get() {
+    return z
+      .object({
+        keys: z.array(z.string()).optional(),
+        patterns: z.array(z.string()).optional(),
+      })
+      .optional()
+  },
+}
+
 /**
  * @description Base schema for any Command
  * @author Xeno
@@ -48,10 +59,22 @@ export const baseCommandZodSchema = {
     {
       intent: z.ZodLiteral<string>
       type: z.ZodLiteral<RequestType>
+      cacheInvalidation: z.ZodOptional<
+        z.ZodObject<
+          {
+            keys: z.ZodOptional<z.ZodArray<z.ZodString>>
+            patterns: z.ZodOptional<z.ZodArray<z.ZodString>>
+          },
+          z.core.$strip
+        >
+      >
     },
     z.core.$strip
   > {
-    return baseZodSchema.get(intent, REQUEST_TYPE.COMMAND)
+    const baseSchema = baseZodSchema.get(intent, REQUEST_TYPE.COMMAND)
+    return baseSchema.extend({
+      cacheInvalidation: cacheInvalidationZodSchema.get(),
+    })
   },
 }
 
