@@ -1,11 +1,4 @@
-## [1.0.2](https://github.com/xeno-js/zod/compare/v1.0.1...v1.0.2) (2026-11-05)
-
-### Bug Fixes
-
-- **utils:** adding cache inalidation schema
-  ([9c1c1d6](https://github.com/xeno-js/zod/commit/9c1c1d63136f9fc8162a8cc319aecb24243192cc))
-
-## [1.0.1](https://github.com/xeno-js/zod/compare/871bd56d044e149d6befa807a8bbb1604c06195c...v1.0.1) (2026-11-05)
+## [1.0.3](https://github.com/xeno-js/zod/compare/871bd56d044e149d6befa807a8bbb1604c06195c...v1.0.3) (2026-11-25)
 
 ### Bug Fixes
 
@@ -13,6 +6,8 @@
   ([3c6a6a3](https://github.com/xeno-js/zod/commit/3c6a6a3acabeadabecdf550e4dd2e854fcc8eca1))
 - update version
   ([cdd3849](https://github.com/xeno-js/zod/commit/cdd384919daa3b7a9338d67b4a6012f25341d4a5))
+- **utils:** adding cache inalidation schema
+  ([9c1c1d6](https://github.com/xeno-js/zod/commit/9c1c1d63136f9fc8162a8cc319aecb24243192cc))
 
 ### Features
 
